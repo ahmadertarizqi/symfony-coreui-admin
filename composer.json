@@ -1,0 +1,29 @@
+{
+    "name": "rizk/coreui-bundle",
+    "description": "CoreUI Admin Template with Symfony Bundle",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ahmadertarizqi",
+            "email": "ahmadderta.rizqi30@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/framework-bundle": "^5.4",
+        "symfony/yaml": "^5.4",
+        "symfony/twig-bundle": "^5.4",
+        "symfony/asset": "^5.4",
+        "symfony/config": "^5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rizk\\CoreUIBundle\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Rizk\\CoreUIBundle\\Tests\\": "tests/"
+        }
+    }
+}

@@ -1,0 +1,4 @@
+.bg-dark-gradient {
+  background-color: #636f83;
+  background-image: linear-gradient(45deg, #3c4b64 0%, #212333 100%);
+}

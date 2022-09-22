@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <base href="./">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>
+      {% block title_page %}
+        CoreUI Free Bootstrap Admin Template
+      {% endblock %}
+    </title>
+    <link rel="manifest" href="{{ asset('assets/favicon/manifest.json') }}">
+    <meta name="theme-color" content="#ffffff">
+
+    {% block stylesheets %}
+      {{ include('@CoreUI/_stylesheets.twig') }}
+    {% endblock %}
+  </head>
+
+  <body>
+    <div class="sidebar sidebar-dark sidebar-fixed bg-dark-gradient" id="sidebar">
+      <div class="sidebar-brand d-none d-md-flex">
+        {% block sidebar_header %}
+          {{ include('@CoreUI/_sidebar_header.twig') }}
+        {% endblock %}
+      </div>
+      <ul class="sidebar-nav" data-coreui="navigation" data-simplebar="">
+        {% block sidebar_menu %}
+          {{ include('@CoreUI/_sidebar_menu.twig') }}
+        {% endblock %}
+      </ul>
+      <button class="sidebar-toggler" type="button" data-coreui-toggle="unfoldable"></button>
+    </div>
+
+    <div class="wrapper d-flex flex-column min-vh-100 bg-light">
+      <header class="header header-sticky mb-4">
+        <div class="container-fluid">
+          <button class="header-toggler px-md-0 me-md-3" type="button" onclick="coreui.Sidebar.getInstance(document.querySelector('#sidebar')).toggle()">
+            <svg class="icon icon-lg">
+              <use xlink:href="{{ asset('vendors/@coreui/icons/svg/free.svg#cil-menu') }}"></use>
+            </svg>
+          </button>
+          <a class="header-brand d-md-none" href="#">
+            {% block header_brand_responsive %}
+              <svg width="118" height="46" alt="CoreUI Logo">
+                <use xlink:href="{{ asset('assets/brand/coreui.svg#full') }}"></use>
+              </svg>
+            {% endblock %}
+          </a>
+          <ul class="header-nav d-none d-md-flex">
+            {% block header_left_menu %}
+              {{ include('@CoreUI/_header_left_menu.twig') }}
+            {% endblock %}
+          </ul>
+          <ul class="header-nav ms-auto">
+            {% block header_right_menu %}
+              {{ include('@CoreUI/_header_right_menu.twig') }}
+            {% endblock %}
+          </ul>
+          <ul class="header-nav ms-3">
+            <li class="nav-item dropdown">
+              <a class="nav-link py-0" data-coreui-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                <div class="avatar avatar-md"><img class="avatar-img" src="{{ asset('assets/img/avatars/8.jpg') }}" alt="user@email.com"></div>
+              </a>
+              <div class="dropdown-menu dropdown-menu-end pt-0">
+                {% block header_user_menu %}
+                  {{ include('@CoreUI/_header_user_menu.twig') }}
+                {% endblock %}
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="header-divider"></div>
+        {# <div class="container-fluid">
+          {{ include('partials/_breadcrumb.twig') }}
+        </div> #}
+      </header>
+
+      <div class="body flex-grow-1 px-3">
+        <div class="container-lg">
+          {% block body %}{% endblock %}
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div>Copyright &copy; {% block copyrights %}{% endblock %}.</div>
+      </footer>
+    </div>
+
+    {% block javascripts %}
+      {{ include('@CoreUI/_javascripts.twig') }}
+    {% endblock %}
+  </body>
+</html>
