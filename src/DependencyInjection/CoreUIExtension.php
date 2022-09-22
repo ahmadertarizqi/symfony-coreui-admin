@@ -1,6 +1,6 @@
 <?php
 
-namespace Rizk\CoreUI\DependencyInjection;
+namespace Rizk\CoreUIBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\Extension\Extension;
 use Symfony\Component\DependencyInjection\ContainerBuilder;

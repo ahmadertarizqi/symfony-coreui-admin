@@ -1,0 +1,9 @@
+framework:
+    test: true
+    secret: 'bgjhnknjhbchgbgnjv'
+    
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: true
