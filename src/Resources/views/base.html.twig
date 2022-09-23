@@ -10,7 +10,7 @@
         CoreUI Free Bootstrap Admin Template
       {% endblock %}
     </title>
-    <link rel="manifest" href="{{ asset('assets/favicon/manifest.json') }}">
+    <link rel="manifest" href="{{ asset('/bundles/coreui/assets/favicon/manifest.json') }}">
     <meta name="theme-color" content="#ffffff">
 
     {% block stylesheets %}
@@ -38,13 +38,13 @@
         <div class="container-fluid">
           <button class="header-toggler px-md-0 me-md-3" type="button" onclick="coreui.Sidebar.getInstance(document.querySelector('#sidebar')).toggle()">
             <svg class="icon icon-lg">
-              <use xlink:href="{{ asset('vendors/@coreui/icons/svg/free.svg#cil-menu') }}"></use>
+              <use xlink:href="{{ asset('/bundles/coreui/vendors/@coreui/icons/svg/free.svg#cil-menu') }}"></use>
             </svg>
           </button>
           <a class="header-brand d-md-none" href="#">
             {% block header_brand_responsive %}
               <svg width="118" height="46" alt="CoreUI Logo">
-                <use xlink:href="{{ asset('assets/brand/coreui.svg#full') }}"></use>
+                <use xlink:href="{{ asset('/bundles/coreui/assets/brand/coreui.svg#full') }}"></use>
               </svg>
             {% endblock %}
           </a>
@@ -61,7 +61,9 @@
           <ul class="header-nav ms-3">
             <li class="nav-item dropdown">
               <a class="nav-link py-0" data-coreui-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                <div class="avatar avatar-md"><img class="avatar-img" src="{{ asset('assets/img/avatars/8.jpg') }}" alt="user@email.com"></div>
+                <div class="avatar avatar-md">
+                    <img class="avatar-img" src="{{ asset('/bundles/coreui/assets/img/avatars/8.jpg') }}" alt="user@email.com">
+                </div>
               </a>
               <div class="dropdown-menu dropdown-menu-end pt-0">
                 {% block header_user_menu %}
@@ -84,7 +86,7 @@
       </div>
 
       <footer class="footer">
-        <div>Copyright &copy; {% block copyrights %}{% endblock %}.</div>
+        <div>{% block copyrights %}Copyright &copy; 2022{% endblock %}.</div>
       </footer>
     </div>
 
