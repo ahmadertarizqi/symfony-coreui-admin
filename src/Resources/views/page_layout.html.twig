@@ -1,0 +1,31 @@
+{% extends "@CoreUI/base.html.twig" %}
+
+{% block body %}
+<div class="card mb-4">
+    <div class="card-header">
+        {% block page_icon %}{% endblock %}
+        <strong>{% block page_title %}{% endblock %}</strong>
+        <div class='float-right'>
+            <div class="btn-group" role="group" aria-label="Actions">
+            {% block page_actions %}{% endblock %}
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        {% block page %}{% endblock %}
+    </div>
+    <div class='card-footer'>
+        <div class='row'>
+            <div class='col-lg-8'>
+                {% block page_footer_left %}{% endblock %}
+            </div>
+            <div class='col-lg-4'>
+                {% block pagination %}
+                    {{ include("@CoreUI/_pagination.twig") }}
+                {% endblock %}
+            </div>
+        </div>
+                
+    </div>
+</div>
+{% endblock %}

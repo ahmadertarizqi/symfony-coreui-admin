@@ -74,15 +74,13 @@
           </ul>
         </div>
         <div class="header-divider"></div>
-        {# <div class="container-fluid">
-          {{ include('partials/_breadcrumb.twig') }}
-        </div> #}
+        {{ include('@CoreUI/_breadcrumb.twig') }}
       </header>
 
       <div class="body flex-grow-1 px-3">
-        <div class="container-lg">
-          {% block body %}{% endblock %}
-        </div>
+            {% block body %}
+                {{ include('@CoreUI/_dashboard.twig') }}
+            {% endblock %}
       </div>
 
       <footer class="footer">
