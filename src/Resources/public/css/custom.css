@@ -6,3 +6,95 @@
 .float-right {
     float: right!important;
 }
+
+.mandatory {
+    color: #F00;
+    font-weight: bold;
+}
+
+.card-header .heading-elements, .card-header .heading-elements-toggle {
+    background-color: inherit;
+    position: absolute;
+    top: 20px;
+    right: 21px;
+}
+
+.select2-container {
+    width: 100% !important;
+}
+
+.btn-xs {
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.btn-xs {
+    padding: 1px 5px;
+}
+
+.col-row-form {
+    margin-bottom: 1em;
+}
+
+#container {
+    height: 400px;
+}
+
+.card {
+    font-size: 0.8rem;
+}
+
+.table th, .table td {
+    padding: 0.4rem 0.5rem;
+}
+
+.table thead {
+    background-color: #b0c8df;
+}
+.table thead th, .table thead td {
+    text-transform: uppercase;
+}
+
+.height-15-em {
+    height: 1.5 em;
+}
+
+.modal-title {
+    text-transform: uppercase;
+    color: #255c6c;
+    font-weight: bold;
+}
+
+.modal-header, .modal-footer {
+    background-color: #f8f9fa;
+}
+
+.modal-footer .btn-outline-success {
+    background-color: #FFF;
+}
+
+.modal-footer .btn-outline-secondary {
+    background-color: #FFF;
+}
+
+.bg-light-info {
+    background-color: #D5F1FD!important;
+    color: #2F8BE6!important;
+    border-color: #D5F1FD;
+}
+
+.bg-light-danger {
+    background-color: #FEE8DC!important;
+    color: #F55252!important;
+    border-color: #FEE8DC;
+}
+
+.bg-light-success {
+    background-color: #E0FBDA!important;
+    color: #40C057!important;
+    border-color: #E0FBDA;
+}
+
+.btn[class*="btn-"], .fc button[class*="btn-"] {
+    margin-bottom: 0.3rem;
+}

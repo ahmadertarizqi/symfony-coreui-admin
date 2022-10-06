@@ -77,11 +77,20 @@
         {{ include('@CoreUI/_breadcrumb.twig') }}
       </header>
 
-      <div class="body flex-grow-1 px-3">
+        <div class="body flex-grow-1 px-3">
+            <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modal" aria-hidden="true">
+                <div class="modal-dialog modal-lg" id="modal-dialog">
+                    <div class="modal-content">
+                        <div style="text-align: center">
+                            <img src="{{ asset('bundles/coreui/assets/img/loading.gif') }}" style="width: 20px"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
             {% block body %}
                 {{ include('@CoreUI/_dashboard.twig') }}
             {% endblock %}
-      </div>
+        </div>
 
       <footer class="footer">
         <div>{% block copyrights %}Copyright &copy; 2022{% endblock %}.</div>
