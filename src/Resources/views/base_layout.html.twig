@@ -87,6 +87,9 @@
                     </div>
                 </div>
             </div>
+            
+            {{ include('@CoreUI/_flashes.twig') }}
+            
             {% block body %}
                 {{ include('@CoreUI/_dashboard.twig') }}
             {% endblock %}
