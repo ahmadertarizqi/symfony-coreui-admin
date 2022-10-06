@@ -1,0 +1,5 @@
+{% set label = label is defined ? label : 'save' %}
+{% set icon = icon is defined ? icon : 'bi-save fa fa-save' %}
+<button id="submitBtn" type="submit" name="_submit" value="1" class="btn btn-sm btn-outline-success">
+    <i class="{{ icon }}"></i> {{ label|trans }} 
+</button>

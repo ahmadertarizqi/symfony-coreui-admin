@@ -49,8 +49,9 @@
 }
 
 .table thead {
-    background-color: #b0c8df;
+    background-color: #f8f9fa;
 }
+
 .table thead th, .table thead td {
     text-transform: uppercase;
 }

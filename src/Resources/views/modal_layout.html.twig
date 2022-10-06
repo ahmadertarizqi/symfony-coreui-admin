@@ -52,17 +52,17 @@
                     submitBtn.addClass("disabled");
                     submitBtn.attr("type", "button");
                     $("#additional_actions").html("");
-                    submitBtn.html('<span class="fa fa-send"></span> {{'send_data'|trans}}');
+                    submitBtn.html('<span class="bi-send-fill"></span> {{ 'send_data'|trans }}');
                 },
                 success: function (e) {
                     if(false === e.status) {
-                        $("#message").html("<p>{{'error'|trans}}: " + e.errors + "</p>");
+                        $("#message").html('<p><span class="bi-shield-fill-exclamation"></span> {{ 'error'|trans }}: ' + e.errors + "</p>");
                         $("#message").removeClass("hidden");
                         submitBtn.removeClass("disabled");
                         submitBtn.attr("type", "submit");
-                        submitBtn.html('<span class="fa fa-save"></span> {{'save'|trans}}');
+                        submitBtn.html('<span class="bi-save"></span> {{ 'save'|trans }}');
                     } else {
-                        $("#message").html("<p>{{'successfull'|trans}}</p>");
+                        $("#message").html('<p><span class="bi-shield-fill-check"></span> {{ 'successfull'|trans }}</p>');
                         $("#message").removeClass("hidden");
                         $("#message").removeClass("alert-danger alert-warning");
                         $("#message").addClass("alert-info");
@@ -71,12 +71,12 @@
                                 for (i = 0; i < e.redirectURL.length; i++) {
                                     let uri = e.redirectURL[i];
                                     let icon = (uri.icon) ? uri.icon : '<i class="fa fa-list"></i>';
-                                    $("#additional_actions").append('<a href="'+uri.url+'" target="_blank" class="btn btn-primary">'+icon+' '+uri.title+'</a>');
+                                    $("#additional_actions").append('<a href="'+uri.url+'" target="_blank" class="btn btn-sm btn-outline-primary">'+icon+' '+uri.title+'</a>');
                                 }
 
                                 submitBtn.addClass("hidden");
                                 submitBtn.attr("type", "submit");
-                                submitBtn.html('<span class="fa fa-save"></span> {{'save'|trans}}');
+                                submitBtn.html('<span class="bi-save"></span> {{ 'save'|trans }}');
                                 $("#btn-modal-close").attr("onclick", "return location.reload();");
                             } else {
                                 for (i = 0; i < e.redirectURL.length; i++) {
@@ -108,7 +108,7 @@
                     $("#message").addClass("hidden");
                     submitBtn.removeClass("disabled");
                     submitBtn.attr("type", "submit");
-                    submitBtn.html('<span class="fa fa-save"></span> {{'save'|trans}}');
+                    submitBtn.html('<span class="bi-save"></span> {{ 'save'|trans }}');
                 }
             });
         }   
