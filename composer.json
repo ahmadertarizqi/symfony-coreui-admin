@@ -14,7 +14,8 @@
         "symfony/yaml": "^5.4|^6.0",
         "symfony/twig-bundle": "^5.4|^6.0",
         "symfony/asset": "^5.4|^6.0",
-        "symfony/config": "^5.4|^6.0"
+        "symfony/config": "^5.4|^6.0",
+        "sonata-project/seo-bundle": "^3.5"
     },
     "autoload": {
         "psr-4": {

@@ -1,20 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <base href="./">
+<html {{ sonata_seo_html_attributes() }}>
+  <head {{ sonata_seo_head_attributes() }}>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>
-      {% block title_page %}
-        CoreUI Free Bootstrap Admin Template
-      {% endblock %}
-    </title>
+    {{ sonata_seo_metadatas() }}
+    {{ sonata_seo_link_canonical() }}
+    {{ sonata_seo_lang_alternates() }}
+    {% block title %}
+        {{ sonata_seo_title() }}
+    {% endblock %}
     <link rel="manifest" href="{{ asset('bundles/coreui/assets/favicon/manifest.json') }}">
     <meta name="theme-color" content="#ffffff">
-
+    {% block icon %}{% endblock %}
     {% block stylesheets %}
       {{ include('@CoreUI/_stylesheets.twig') }}
+      <style>
+        @media (min-width: 992px) {
+            .modal-lg, .modal-xl {
+                --cui-modal-width: 1300px;
+            }
+        }
+        </style>
     {% endblock %}
   </head>
 
@@ -78,7 +85,7 @@
       </header>
 
         <div class="body flex-grow-1 px-3">
-            <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modal" aria-hidden="true">
+            <div class="modal fade" id="modal" data-keyboard="false" data-backdrop="static" tabindex="-1" aria-labelledby="modal" aria-hidden="true">
                 <div class="modal-dialog modal-lg" id="modal-dialog">
                     <div class="modal-content">
                         <div style="text-align: center">
